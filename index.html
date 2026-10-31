@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Manor Comics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Mystery Manor Comics</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#comics">Comics</a></li>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Chapter 12: The Hidden Cipher</h1>
+            <p>Detective Sarah Chen discovers ancient symbols in the mansion basement</p>
+            <button onclick="window.location.href=\'#comics\'">Read Latest Comic</button>
+        </div>
+    </section>
+
+    <!-- Recent Updates -->
+    <section class="recent-updates">
+        <h2>Recent Updates</h2>
+        <div class="comic-grid">
+            <div class="comic-card">
+                <img src="https://via.placeholder.com/300x200?text=Chapter+11" alt="Chapter 11: Midnight Escape">
+                <h3>Chapter 11: Midnight Escape</h3>
+                <p>The gang narrowly escapes a deadly trap</p>
+                <span class="date">Yesterday</span>
+            </div>
+            <div class="comic-card">
+                <img src="https://via.placeholder.com/300x200?text=Chapter+10" alt="Chapter 10: Blood Moon Rising">
+                <h3>Chapter 10: Blood Moon Rising</h3>
+                <p>Strange lunar events reveal a secret society</p>
+                <span class="date">3 days ago</span>
+            </div>
+            <div class="comic-card">
+                <img src="https://via.placeholder.com/300x200?text=Chapter+9" alt="Chapter 9: Echoes of the Past">
+                <h3>Chapter 9: Echoes of the Past</h3>
+                <p>Ancient artifacts awaken long-buried memories</p>
+                <span class="date">1 week ago</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Mystery Manor Comics. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a> |
+                <a href="#">Twitter</a> |
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple navigation functionality
+        document.addEventListener(\'DOMContentLoaded\', function() {
+            const navLinks = document.querySelectorAll(\'nav a\');
+            
+            navLinks.forEach(link => {
+                link.addEventListener(\'click\', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute(\'href\');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: \'smooth\' });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
